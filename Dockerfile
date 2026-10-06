@@ -1,15 +1,23 @@
-FROM python:3.12-slim
+FROM python:3.11-slim 
 
-ENV PYTHONDONTWRITEBYTECODE=1 \
-    PYTHONUNBUFFERED=1 \
-    ACEEST_DATABASE=/app/data/aceest_fitness.db
+WORKDIR /app 
 
-WORKDIR /app
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+COPY . . 
 
-COPY app.py .
-RUN mkdir -p /app/data
+RUN pip install -r requirements.txt 
 
-EXPOSE 5000
-CMD ["python", "app.py"]
+EXPOSE 5000 
+
+CMD ["python", "app.py"] 
+
+Commit: 
+
+git add . 
+
+git commit -m "Added Docker support" 
+
+git tag v2.0 
+
+git push 
+
+git push v2.0 
