@@ -9,7 +9,7 @@ def client(tmp_path):
         {
             "TESTING": True,
             "DATABASE": str(tmp_path / "test.db"),
-            "ADMIN_PASSWORD": "test-password",
+            "ADMIN_PASSWORD": "test-passwordd",
         }
     )
 
