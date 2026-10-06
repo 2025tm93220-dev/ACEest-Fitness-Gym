@@ -62,3 +62,5 @@ The GitHub Actions workflow runs syntax validation, Pytest, and a Docker image b
 - `POST /clients/<client_id>/workouts`
 
 See `Finalized_DevOps_Assignment_Report.md` for the submission summary, implementation details, evidence, and setup instructions.
+
+# Membership module added
