@@ -1,27 +1,41 @@
-name: Build and Test
+name: CI Pipeline 
 
-on:
-  push:
-  pull_request:
+on: 
 
-permissions:
-  contents: read
+  push: 
 
-jobs:
-  validate:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-      - name: Install dependencies
-        run: python -m pip install --upgrade pip && pip install -r requirements.txt
-      - name: Build and lint
-        run: python -m py_compile app.py
-      - name: Run tests
-        run: pytest -q
-      - name: Build Docker image
-        run: docker build --tag aceest-fitness:${{ github.sha }} .
+  pull_request: 
+
+jobs: 
+
+  build: 
+
+    runs-on: ubuntu-latest 
+
+    steps: 
+
+    - uses: actions/checkout@v4 
+
+    - uses: actions/setup-python@v5 
+
+      with: 
+
+        python-version: "3.11" 
+
+    - name: Install Dependencies 
+
+      run: | 
+
+        pip install -r requirements.txt 
+
+    - name: Run Tests 
+
+      run: | 
+
+        pytest 
+
+    - name: Build Docker Image 
+
+      run: | 
+
+        docker build -t aceest-gym . 
