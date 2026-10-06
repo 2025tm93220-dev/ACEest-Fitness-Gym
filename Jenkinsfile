@@ -1,25 +1,49 @@
-pipeline {
-    agent any
+pipeline { 
 
-    stages {
-        stage('Checkout') {
-            steps { checkout scm }
-        }
-        stage('Install') {
-            steps { sh 'python3 -m pip install -r requirements.txt' }
-        }
-        stage('Build and Test') {
-            steps {
-                sh 'python3 -m py_compile app.py'
-                sh 'pytest -q'
-            }
-        }
-        stage('Docker Build') {
-            steps { sh 'docker build --tag aceest-fitness:jenkins .' }
-        }
-    }
+    agent any 
 
-    post {
-        always { cleanWs() }
-    }
-}
+    stages { 
+
+        stage('Checkout') { 
+
+            steps { 
+
+                git 'https://github.com/YOUR_USERNAME/ACEest-Fitness-Gym.git' 
+
+            } 
+
+        } 
+
+        stage('Install') { 
+
+            steps { 
+
+                sh 'pip install -r requirements.txt' 
+
+            } 
+
+        } 
+
+        stage('Test') { 
+
+            steps { 
+
+                sh 'pytest' 
+
+            } 
+
+        } 
+
+        stage('Docker Build') { 
+
+            steps { 
+
+                sh 'docker build -t aceest-gym .' 
+
+            } 
+
+        } 
+
+    } 
+
+} 
