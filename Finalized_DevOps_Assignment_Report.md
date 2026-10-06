@@ -2,7 +2,7 @@
 ## ACEest Fitness Application
 
 **GitHub owner:** [2025tm93220-dev](https://github.com/2025tm93220-dev)  
-**Expected repository:** [aceest-fitness-devops-assignment](https://github.com/2025tm93220-dev/aceest-fitness-devops-assignment)  
+**Repository:** [ACEest-Fitness-Gym](https://github.com/2025tm93220-dev/ACEest-Fitness-Gym)
 **Date:** 29 September 2026
 
 ## 1. Executive Summary
@@ -85,21 +85,17 @@ Docker was not available on the development machine, so the local Docker build w
 
 ### GitHub setup
 
-The supplied URL identifies the GitHub owner rather than a complete repository. Create or use the repository below before pushing:
+The GitHub repository is available at:
 
 ```text
-https://github.com/2025tm93220-dev/aceest-fitness-devops-assignment
+https://github.com/2025tm93220-dev/ACEest-Fitness-Gym
 ```
 
 Then add it as the project remote and push the default branch:
 
 ```bash
-git init
-git add .
-git commit -m "Prepare ACEest Fitness DevOps assignment"
-git branch -M main
-git remote add origin https://github.com/2025tm93220-dev/aceest-fitness-devops-assignment.git
-git push -u origin main
+git remote set-url origin https://github.com/2025tm93220-dev/ACEest-Fitness-Gym.git
+git push -u origin main --follow-tags
 ```
 
 ## 7. Deployment Notes

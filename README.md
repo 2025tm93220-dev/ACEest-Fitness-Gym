@@ -1,8 +1,10 @@
-# ACEest Fitness DevOps Assignment
+# ACEest-Fitness-Gym
+
+## Fitness Management DevOps Assignment
 
 Repository owner: [2025tm93220-dev](https://github.com/2025tm93220-dev)
 
-Expected GitHub repository: [aceest-fitness-devops-assignment](https://github.com/2025tm93220-dev/aceest-fitness-devops-assignment)
+GitHub repository: [ACEest-Fitness-Gym](https://github.com/2025tm93220-dev/ACEest-Fitness-Gym)
 
 ## Overview
 
